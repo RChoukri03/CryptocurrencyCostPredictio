@@ -33,5 +33,5 @@ The model processes historical price data and predicts whether the price will in
    - Includes **EarlyStopping**, **ModelCheckpoint**, **TensorBoard**, and **TerminateOnNaN** to optimize and monitor training.
 
 ## **Configuration**
-The model and data pipelines are customizable through configuration files.
+The model and data pipelines are customizable through configuration files, 'data/config.yaml' for datDownloader configuration, and config.yaml for model & train configuration
 
