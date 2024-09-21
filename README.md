@@ -35,20 +35,3 @@ The model processes historical price data and predicts whether the price will in
 ## **Configuration**
 The model and data pipelines are customizable through configuration files.
 
-### **Data Configuration**
-You can specify which cryptocurrencies and trading intervals to use, as well as the date range for the historical data.
-
-```yaml
-# List of trading pairs
-symbols:
-  - DOGEUSDT
-  - ETHUSDT
-  - BTCUSDT
-  - ADAUSDT
-
-# Trading interval (e.g., 1 minute, 1 hour)
-interval: "1m"
-
-# Start and end dates for data
-start_date: "01/01/2022"
-end_date: "now"
