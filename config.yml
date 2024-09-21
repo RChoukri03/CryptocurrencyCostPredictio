@@ -1,0 +1,43 @@
+data:
+  directory: "data/"
+  include_all: false
+  included_coins: ["ETH"]  # List specific coins or use ["all"] to include all
+
+model:
+  num_heads: 32
+  d_model: 512
+  ff_dim: 512  
+  num_transformer_blocks: 2
+  projection_dim: 256
+  sequence_length: 120
+  prediction_window: 15
+
+training:
+  epochs: 1000  # Number of epochs to train the model
+  batch_size: 156  # Size of the batches of data
+  validation_split: 0.2  # Fraction of the training data to be used as validation data
+  callbacks:
+    - ModelCheckpoint:  # Callback to save the best model based on validation loss
+        filepath: best_crypto_ETH_trading_model.keras
+        save_best_only: true  # Only save the model if the validation loss improves
+        monitor: loss  # Metric to monitor
+        mode: min  # Mode for monitoring (minimize the validation loss)
+        save_weights_only: false  # Save the full model, not just the weights
+        verbose: 1  # Verbosity mode
+ 
+    - EarlyStopping:  # Callback to stop training when the validation loss has stopped improving
+        monitor: loss  # Metric to monitor
+        patience: 20  # Number of epochs with no improvement after which training will be stopped
+        verbose: 1  # Verbosity mode
+    - TensorBoard:  # Callback to log training metrics for TensorBoard
+        log_dir: logs/crypto_trading_model  
+    - TerminateOnNaN  
+
+technical_indicators:
+  include: false
+  window_sma: 20
+  window_ema: 20
+  window_rsi: 14
+  window_bb: 20
+  k_bb: 2
+  window_cci: 20

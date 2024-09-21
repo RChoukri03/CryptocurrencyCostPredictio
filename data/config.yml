@@ -1,0 +1,41 @@
+# Liste des symboles de trading. Chaque symbole est une paire de trading
+# sur Binance, généralement sous la forme BASECURRENCYQUOTECURRENCY.
+# Par exemple, DOGEUSDT représente le trading de Dogecoin contre USDT.
+symbols:
+  - DOGEUSDT
+  - SHIBUSDT
+  - PEPEUSDT
+  - ADAUSDT
+  - SOLUSDT
+  - LINKUSDT
+  - RNDRUSDT
+  - NEARUSDT
+  - FETUSDT
+  - IMXUSDT
+  - AVAXUSDT
+  - BTCUSDT
+  - ETHUSDT
+  - BNBUSDT
+  - TRXUSDT
+  - XRPUSDT
+  - DOTUSDT
+
+
+# Intervalle de temps pour les données de trading.
+# Les valeurs possibles incluent:
+# "1m" pour une minute, "3m" pour trois minutes, "5m" pour cinq minutes,
+# "15m" pour quinze minutes, "30m" pour trente minutes, "1h" pour une heure,
+# "2h" pour deux heures, "4h" pour quatre heures, "6h" pour six heures,
+# "8h" pour huit heures, "12h" pour douze heures, "1d" pour un jour,
+# "3d" pour trois jours, "1w" pour une semaine, "1M" pour un mois.
+interval: "1m"
+
+
+# Date de début pour la récupération des données.
+# Format: "JJ/MM/AAAA". Par exemple, "01/05/2024" pour le 1er mai 2024.
+start_date: "01/01/2022"
+
+# Date de fin pour la récupération des données.
+# Utilisez "now" pour indiquer la date et l'heure actuelles.
+# Sinon, spécifiez une date au format "JJ/MM/AAAA".
+end_date: "now"
